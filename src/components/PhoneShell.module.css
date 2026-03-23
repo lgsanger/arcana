@@ -1,0 +1,10 @@
+.shell {
+  width: 100%;
+  max-width: var(--phone-width);
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--color-bg);
+  color: var(--color-text);
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(98, 53, 27, 0.15);
+}

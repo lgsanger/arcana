@@ -1,0 +1,88 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 24px 48px;
+  min-height: 100%;
+}
+
+.title {
+  margin: 0;
+  font-size: 46px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.divider {
+  width: min(324px, 100%);
+  margin: 12px 0 8px;
+  line-height: 0;
+}
+
+.divider img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tagline {
+  margin: 0 0 36px;
+  max-width: 310px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.tagline p {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 322px;
+}
+
+.star {
+  margin: 10px 0;
+  font-family: var(--font-ui);
+  font-size: 20px;
+  color: var(--color-text-deep);
+  text-shadow: var(--shadow-card);
+  line-height: 1;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 82px;
+  padding: 12px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-ui);
+  font-size: 24px;
+  text-align: center;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.navLink:hover {
+  filter: brightness(1.03);
+}
+
+.navLink:active {
+  transform: scale(0.99);
+}
+
+.navBtnDisabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+  pointer-events: none;
+}

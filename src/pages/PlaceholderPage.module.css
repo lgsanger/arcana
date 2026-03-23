@@ -1,0 +1,30 @@
+.page {
+  padding: 48px 28px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.back {
+  margin-top: auto;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

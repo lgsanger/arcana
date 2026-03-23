@@ -1,0 +1,49 @@
+:root {
+  --color-bg: #fff1b3;
+  --color-surface: #fcc287;
+  --color-surface-nav: #d0af8c;
+  --color-text: #62351b;
+  --color-text-deep: #361807;
+  --color-border: #62351b;
+  --shadow-card: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --font-display: "Aboreto", "Times New Roman", serif;
+  --font-ui: "Noto Sans", system-ui, sans-serif;
+  --phone-width: 393px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #2a2419;
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
