@@ -1,13 +1,15 @@
 :root {
-  --color-bg: #fff1b3;
-  --color-surface: #fcc287;
+  /* Home / Figma-aligned palette */
+  --color-bg: #fff5c3;
+  --color-surface: #ffc48c;
   --color-surface-nav: #d0af8c;
-  --color-text: #62351b;
-  --color-text-deep: #361807;
-  --color-border: #62351b;
+  --color-text: #4a332d;
+  --color-text-deep: #4a332d;
+  --color-border: #4a332d;
   --shadow-card: 0 4px 4px rgba(0, 0, 0, 0.25);
-  --font-display: "Aboreto", "Times New Roman", serif;
-  --font-ui: "Noto Sans", system-ui, sans-serif;
+  /* Adobe Fonts (Typekit) — kit exposes lowercase "aboreto" */
+  --font-display: "aboreto", "Aboreto", "Times New Roman", serif;
+  --font-ui: var(--font-display);
   --phone-width: 393px;
 }
 

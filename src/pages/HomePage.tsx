@@ -33,7 +33,7 @@ export function HomePage() {
           </button>
           <Star />
           <button type="button" className={`${styles.navLink} ${styles.navBtnDisabled}`} disabled>
-            Zodiac Signs ✶
+            Zodiac Signs ✦
           </button>
           <Star />
           <Link className={styles.navLink} to="/daily-pull">
