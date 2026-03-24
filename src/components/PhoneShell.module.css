@@ -2,6 +2,7 @@
   width: 100%;
   max-width: var(--phone-width);
   min-height: 100dvh;
+  height: auto;
   margin: 0 auto;
   background: var(--color-bg);
   color: var(--color-text);

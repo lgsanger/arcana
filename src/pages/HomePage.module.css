@@ -18,16 +18,13 @@
   font-weight: 400;
 }
 
+/* Thin rule under the title — wireframe divider (replaces Figma vector asset that painted a solid block). */
 .divider {
-  width: min(324px, 100%);
-  margin: 12px 0 8px;
-  line-height: 0;
-}
-
-.divider img {
-  display: block;
-  width: 100%;
-  height: auto;
+  width: min(324px, calc(100% - 8px));
+  height: 0;
+  margin: 1rem 0 0.75rem;
+  border: none;
+  border-top: 1px solid var(--color-border);
 }
 
 .tagline {

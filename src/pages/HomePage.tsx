@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { figmaAssets } from "../assets/figma";
 import { PhoneShell } from "../components/PhoneShell";
 import styles from "./HomePage.module.css";
 
@@ -16,9 +15,7 @@ export function HomePage() {
     <PhoneShell>
       <main className={styles.page} data-node-id="1:2">
         <h1 className={styles.title}>Arcana AID</h1>
-        <div className={styles.divider} aria-hidden>
-          <img src={figmaAssets.homeDividerLine} alt="" />
-        </div>
+        <hr className={styles.divider} />
         <div className={styles.tagline}>
           <p>Welcome to your tarot cheat sheet</p>
           <p>SPIRITUALITY MADE EASY</p>
