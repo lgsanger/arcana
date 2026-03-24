@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 81px 20px 48px;
+  padding: 80px 20px 48px;
   min-height: 100%;
   font-family: var(--font-display);
   color: var(--color-text);
@@ -48,64 +48,90 @@
 
 .homeBtn:hover { filter: brightness(1.05); }
 
-.blurb {
-  margin: 0 0 8px;
+.description {
   max-width: 310px;
   text-align: center;
   font-size: 0.9375rem;
   line-height: 1.47;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+  margin: 0 0 16px;
 }
+
+/* "Click here to learn…" CTA button */
+.interpretBtn {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 322px;
+  min-height: 66px;
+  padding: 12px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter 0.12s ease;
+  margin-bottom: 0;
+}
+
+.interpretBtn:hover { filter: brightness(1.03); }
 
 .star {
   font-size: 1.25rem;
   color: var(--color-text-deep);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 8px 0 16px;
+  margin: 16px 0;
   line-height: 1;
 }
 
-/* Card container */
-.cardWrap {
+/* Suit cards */
+.suitCard {
   width: 100%;
   max-width: 322px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   box-shadow: var(--shadow-card);
+  margin-bottom: 16px;
+  padding: 0 0 16px;
   overflow: hidden;
-  padding-bottom: 20px;
 }
 
-.cardImage {
-  width: calc(100% + 4px);
-  margin: -2px -2px 0;
-  aspect-ratio: 358 / 496;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-.cardName {
-  margin: 12px 0 8px;
-  text-align: center;
+.suitHeader {
+  padding: 12px 18px 0;
   font-size: 0.9375rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  margin: 0 0 4px;
 }
 
-.innerDivider {
-  width: min(271px, calc(100% - 40px));
+.suitInnerDivider {
+  width: calc(100% - 28px);
   height: 0;
-  margin: 0 auto 12px;
+  margin: 0 14px 10px;
   border: none;
   border-top: 1px solid var(--color-border);
 }
 
-.keywords {
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.35;
-  letter-spacing: 0.04em;
+.suitKeywords {
+  padding: 0 18px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 }
 
-.keywords p { margin: 0; }
+.suitKeywords p { margin: 0; }
+
+.bottomStar {
+  font-size: 1.25rem;
+  color: var(--color-text-deep);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 8px 0 0;
+  line-height: 1;
+}

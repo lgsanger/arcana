@@ -3,10 +3,6 @@
  * These URLs expire after ~7 days; re-export from Figma or add files under /public for production.
  */
 export const figmaAssets = {
-  dailyPullDivider:
-    "https://www.figma.com/api/mcp/asset/c0b0512b-581f-47a1-b480-aa1d18b1ee4f",
-  dailyPullCardDivider:
-    "https://www.figma.com/api/mcp/asset/51076b22-f4f0-4193-82b0-8be0a49bcfac",
   highPriestessCard:
     "https://www.figma.com/api/mcp/asset/dff33171-fa46-49e4-9972-cc2e28af81ba",
 } as const;
@@ -61,4 +57,20 @@ export const majorArcanaCards = {
   theSun:           "https://www.figma.com/api/mcp/asset/f8afcec5-474e-4ec9-9c0f-ee94bd640984",
   judgement:        "https://www.figma.com/api/mcp/asset/23ee9a46-3b9d-4f54-806c-3875a2dfc484",
   theWorld:         "https://www.figma.com/api/mcp/asset/b2188ffe-57f3-49ab-9f99-ee453985cd27",
+} as const;
+
+/** Card images used in the Zodiac Signs page (frame 86:2). */
+export const zodiacCardImages = {
+  aries:       "https://www.figma.com/api/mcp/asset/30105e0a-8afa-45f9-8f2d-38e382e2e2d3", // The Emperor
+  taurus:      "https://www.figma.com/api/mcp/asset/1e1954d6-6c46-4b0a-a2f9-9b1d9231b776", // The Hierophant
+  gemini:      "https://www.figma.com/api/mcp/asset/30c8ad8e-1cbb-481d-90d6-91984f50a0e9", // The Lovers
+  cancer:      "https://www.figma.com/api/mcp/asset/db6a00dc-c14c-453a-81f3-e09e2304c0b9", // The Chariot
+  leo:         "https://www.figma.com/api/mcp/asset/d239df28-8ea0-4a84-9ab5-bef5501b312e", // Strength
+  virgo:       "https://www.figma.com/api/mcp/asset/c661178f-0677-4416-8c4e-afe18f1db675", // The Hermit
+  libra:       "https://www.figma.com/api/mcp/asset/35ec0b62-d25a-47fc-bda8-09de5630f699", // Justice
+  scorpio:     "https://www.figma.com/api/mcp/asset/075d068e-c53d-4e8e-aca0-e30e2d5607bd", // Death
+  sagittarius: "https://www.figma.com/api/mcp/asset/abaa400a-1a03-47a0-9370-be796831ccb5", // Temperance
+  capricorn:   "https://www.figma.com/api/mcp/asset/a2a979da-9ab2-4d21-bf9d-e8480e5cef02", // The Devil
+  aquarius:    "https://www.figma.com/api/mcp/asset/dfdb1908-b817-465c-9be6-9bc0f2785209", // The Star
+  pisces:      "https://www.figma.com/api/mcp/asset/dcaa4cb8-7acb-4352-a5bd-d4b5c6b4d9ef", // The Moon
 } as const;

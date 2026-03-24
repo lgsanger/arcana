@@ -25,13 +25,13 @@ export function HomePage() {
             Major Arcana ☾
           </Link>
           <Star />
-          <button type="button" className={`${styles.navLink} ${styles.navBtnDisabled}`} disabled>
+          <Link className={styles.navLink} to="/minor-arcana">
             Minor Arcana ☽
-          </button>
+          </Link>
           <Star />
-          <button type="button" className={`${styles.navLink} ${styles.navBtnDisabled}`} disabled>
+          <Link className={styles.navLink} to="/zodiac">
             Zodiac Signs ✦
-          </button>
+          </Link>
           <Star />
           <Link className={styles.navLink} to="/daily-pull">
             Daily Pull ☼
