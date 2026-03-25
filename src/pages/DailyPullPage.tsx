@@ -1,13 +1,13 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { PhoneShell } from "../components/PhoneShell";
 import { getDailyCard } from "../utils/getDailyCard";
 import { markDailyPullSeen } from "../utils/dailyPullTracker";
 import styles from "./DailyPullPage.module.css";
 
-export function DailyPullPage() {
-  const card = useMemo(() => getDailyCard(), []);
+const card = getDailyCard();
 
+export function DailyPullPage() {
   useEffect(() => {
     markDailyPullSeen();
   }, []);
