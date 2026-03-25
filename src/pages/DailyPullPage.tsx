@@ -1,9 +1,17 @@
+import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { figmaAssets } from "../assets/figma";
 import { PhoneShell } from "../components/PhoneShell";
+import { getDailyCard } from "../utils/getDailyCard";
+import { markDailyPullSeen } from "../utils/dailyPullTracker";
 import styles from "./DailyPullPage.module.css";
 
 export function DailyPullPage() {
+  const card = useMemo(() => getDailyCard(), []);
+
+  useEffect(() => {
+    markDailyPullSeen();
+  }, []);
+
   return (
     <PhoneShell>
       <main className={styles.page} data-node-id="1:5">
@@ -18,15 +26,15 @@ export function DailyPullPage() {
         <section className={styles.cardWrap} aria-labelledby="daily-card-title">
           <img
             className={styles.cardImage}
-            src={figmaAssets.highPriestessCard}
-            alt="The High Priestess"
+            src={card.image}
+            alt={card.name}
           />
-          <p id="daily-card-title" className={styles.cardName}>The High Priestess</p>
+          <p id="daily-card-title" className={styles.cardName}>{card.name}</p>
           <hr className={styles.innerDivider} />
           <div className={styles.keywords}>
-            <p>Intuition</p>
-            <p>mystery</p>
-            <p>subconscious</p>
+            {card.keywords.map((kw) => (
+              <p key={kw}>{kw}</p>
+            ))}
           </div>
         </section>
       </main>

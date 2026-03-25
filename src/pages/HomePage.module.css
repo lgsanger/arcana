@@ -97,3 +97,70 @@
   color: var(--color-text);
   -webkit-text-fill-color: var(--color-text);
 }
+
+/* Daily Pull link wrapper — same visual as .navLink but allows badge positioning */
+.navLinkWrap {
+  appearance: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 82px;
+  padding: 12px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.navLinkWrap:hover { filter: brightness(1.03); }
+.navLinkWrap:active { transform: scale(0.99); }
+
+/* Unseen daily pull — give the button a warm glow */
+.navLinkUnseen {
+  box-shadow: var(--shadow-card), 0 0 0 2px var(--color-text);
+}
+
+/* "NEW" badge pill */
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 2px 7px;
+  border-radius: 99px;
+  background: var(--color-text);
+  color: var(--color-surface);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(0.95); }
+}
+
+/* Enable reminders button */
+.notifyBtn {
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  opacity: 0.75;
+  transition: opacity 0.15s ease;
+}
+
+.notifyBtn:hover { opacity: 1; }

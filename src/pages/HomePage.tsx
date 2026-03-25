@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PhoneShell } from "../components/PhoneShell";
+import { useNotifications } from "../hooks/useNotifications";
+import { hasDailyPullBeenSeen } from "../utils/dailyPullTracker";
 import styles from "./HomePage.module.css";
 
 function Star() {
@@ -11,6 +14,9 @@ function Star() {
 }
 
 export function HomePage() {
+  const { permission, supported, requestPermission } = useNotifications();
+  const [pullSeen] = useState(() => hasDailyPullBeenSeen());
+
   return (
     <PhoneShell>
       <main className={styles.page} data-node-id="1:2">
@@ -33,10 +39,28 @@ export function HomePage() {
             Zodiac Signs ✦
           </Link>
           <Star />
-          <Link className={styles.navLink} to="/daily-pull">
-            Daily Pull ☼
+          <Link
+            className={`${styles.navLinkWrap} ${!pullSeen ? styles.navLinkUnseen : ""}`}
+            to="/daily-pull"
+          >
+            <span>Daily Pull ☼</span>
+            {!pullSeen && (
+              <span className={styles.badge} aria-label="New card available">
+                NEW
+              </span>
+            )}
           </Link>
         </nav>
+
+        {supported && permission === "default" && (
+          <button
+            className={styles.notifyBtn}
+            onClick={requestPermission}
+            aria-label="Enable daily pull reminders"
+          >
+            ☽ Enable daily reminders ☾
+          </button>
+        )}
       </main>
     </PhoneShell>
   );
